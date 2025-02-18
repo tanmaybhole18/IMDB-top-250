@@ -10,12 +10,13 @@ h1 {
   text-align: center;
   padding: 20px;
   margin-top: 0;
-  background-color: #f5c518; 
+  background-color: #f5c518;
   color: #212121;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
-
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -50,6 +51,38 @@ h1 {
 .movie-card h2 {
   font-size: 18px;
   margin: 10px 0;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box {
+  padding: 10px 15px; 
+  border: 2px solid #ddd; 
+  border-radius: 25px; 
+  font-size: 16px; 
+  color: #333; 
+  outline: none; 
+  width: 50%; 
+  max-width: 400px; 
+  transition: all 0.3s ease; 
+}
+
+.input-box:hover {
+  border-color: #f5c518;
+}
+
+.input-box:focus {
+  border-color: #f5c518;
+  box-shadow: 0 0 8px rgba(245, 197, 24, 0.5);
+}
+
+.input-box::placeholder {
+  color: #999;
+  font-style: italic;
 }
 
 .movie-card p {
